@@ -13,12 +13,12 @@ Option :
           
 Group :
 
-    l    leoneed
-    m    moremorejump
-    v    vividbadsquad
-    w    wonderxshowtime
-    n    niigo
-    o    others
+    l    Leo/need
+    m    MORE MORE JUMP!
+    v    Vivid BAD SQUAD
+    w    Wonderlands x Showtime
+    n    25-ji, Nightcord de.
+    o    VIRTUAL SINGER & Other
 
 Song list are taken from:
 https://projectsekai.fandom.com/wiki/Category:Commissioned_Songs
