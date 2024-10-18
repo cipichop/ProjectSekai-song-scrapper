@@ -9,7 +9,7 @@ def getupdate(group):
     print("Fetching page...")
 
     for i in url:
-        if group == 6 and flag:
+        if group == 5 and flag:
             songs.append([0])
             flag = False
 
@@ -29,7 +29,8 @@ def getdata(url, group):
 
     if response.status_code == 200:
         html_content = response.text
-        html_content = re.split('</p><div style="-webkit-column-count:2;column-count:2;">|</div><p class="mw-empty-elt"></p></div></div>', html_content)[:-1]
+        delimiters = r'<div class="tabber wds-tabber">|</div><p class="mw-empty-elt"></p></div>'
+        html_content = re.split(delimiters, html_content)[1:]
         pattern = r'title="([^"]+)"'
         x = re.findall(pattern, html_content[group])
         return x

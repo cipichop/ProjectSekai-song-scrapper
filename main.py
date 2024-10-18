@@ -23,21 +23,22 @@ def manual():
     \t-h --help              display this message then exit
           
     Group :
-    \tl    leoneed
-    \tm    moremorejump
-    \tv    vividbadsquad
-    \tw    wonderxshowtime
-    \tn    niigo
-    \to    others''')
+    \tl    Leo/need
+    \tm    MORE MORE JUMP!
+    \tv    Vivid BAD SQUAD
+    \tw    Wonderlands x Showtime
+    \tn    25-ji, Nightcord de.
+    \to    VIRTUAL SINGER & Other
+          ''')
     exit(1)
 
 initial = {
-    'l':1, 'leoneed':1,
-    'm':2, 'moremorejump':2,
-    'v':3, 'vividbadsquad':3,
-    'w':4, 'wonderxshowtime':4,
-    'n':5, 'niigo':5,
-    'o':6, 'others':6
+    'l':0,
+    'm':1,
+    'v':2,
+    'w':3,
+    'n':4,
+    'o':5,
 }
 
 if len(sys.argv) < 2 or len(sys.argv) > 3:

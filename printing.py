@@ -4,12 +4,12 @@ from tabulate import tabulate
 from scrapping import getupdate
 
 groupname = {
-    1:'Leo/need',
-    2:'MORE MORE JUMP!',
-    3:'Vivid BAD SQUAD',
-    4:'Wonderlands x Showtime',
-    5:'25-ji, Nightcord de.',
-    6:'VIRTUAL SINGER & Other'
+    0:'Leo/need',
+    1:'MORE MORE JUMP!',
+    2:'Vivid BAD SQUAD',
+    3:'Wonderlands x Showtime',
+    4:'25-ji, Nightcord de.',
+    5:'VIRTUAL SINGER & Other'
 }
 
 def printsong(group):
@@ -17,7 +17,7 @@ def printsong(group):
     print()
     print(groupname[group])
     print()
-
+    
     songs = [(i+1, j) for i, j in enumerate(x[0])]
     with open('cov_tmp.dat', 'w') as f:
         headers = ['No.', 'Cover Song Title']
@@ -38,7 +38,7 @@ def printsong(group):
     os.remove('com_tmp.dat')
 
     for i in range(max(len(com), len(cov))):
-        if group == 6:
+        if group == 5:
             data2 = com[i][:-1]
             print(f"{data2}")
         else:
