@@ -1,6 +1,6 @@
 import sys
 
-import wow as wow
+import printing as printing
 
 def printheader():
     print('''
@@ -40,38 +40,35 @@ initial = {
     'o':6, 'others':6
 }
 
-def checkoption():
-    if len(sys.argv) < 2 or len(sys.argv) > 3:
+if len(sys.argv) < 2 or len(sys.argv) > 3:
+    manual()
+    exit(1)
+
+option = sys.argv[1]
+
+if len(sys.argv) == 2:
+    
+    if option in ['-r', '--rank', '-s', '--songs']:
+        print('Missing group.')
+        exit(1)
+
+    else:
         manual()
         exit(1)
 
-    option = sys.argv[1]
-
-    if len(sys.argv) == 2:
-        
-        if option in ['-r', '--rank', '-s', '--songs']:
-            print('Missing group.')
-            exit(1)
-
-        else:
-            manual()
-            exit(1)
-
-    elif len(sys.argv) == 3:
-        try:
-            group = initial[sys.argv[2]]
-        except:
-            print('Unknown group.')
-            exit(1)
+elif len(sys.argv) == 3:
+    try:
+        group = initial[sys.argv[2]]
+    except:
+        print('Unknown group.')
+        exit(1)
 
 
-        if option in ['-s', '--songs']:
-            printheader()
-            wow.printsong(group)
-            exit(1)
-        
-        else:
-            manual()
-            exit(1)
-
-checkoption()
+    if option in ['-s', '--songs']:
+        printheader()
+        printing.printsong(group)
+        exit(1)
+    
+    else:
+        manual()
+        exit(1)

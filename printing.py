@@ -1,7 +1,7 @@
 import os
 from tabulate import tabulate
 
-from update import getupdate
+from scrapping import getupdate
 
 groupname = {
     1:'Leo/need',
